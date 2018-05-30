@@ -1,19 +1,34 @@
 <html>
 <head>
 
+    <script>
+    
+        function cambiarColor(color){
+            var element = document.getElementById("etiqueta_h1");
+            element.style.color = color;
+        }
+
+        function ponerColor(){
+            var element = document.getElementById("color_h1")
+            cambiarColor(element.value);
+        }
+    
+    </script>
 
 </head>
 
 <body>
-<h1 id="etiqueta h1" style="color: red">Titulo Principal 1</h1>
-<h2>Titulo Principal 2 </h2>
-<h3>Titulo Principal 3</h3>
-<h4>Titulo Principal 4</h4>
-<h5>Titulo Principal 5</h5>
-<h6>Titulo Principal 6</h6>
+    <h1 id="etiqueta_h1" style="color: greenyellow; background-color:gray">Titulo Principal 1</h1>
+    
+    <button onclick="cambiarColor('red')">Rojo</button>
+    <button onclick="cambiarColor('green')">Verde</button>
+    <button onclick="cambiarColor('blue')">Azul</button>
+    
+    <label>Color H1</label> 
 
+    <input type="text" id="color_h1"/>
 
-
+    <button onclick="ponerColor()">Cambiar Color</button>
 
 </body>
 
